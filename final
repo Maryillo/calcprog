@@ -1,0 +1,61 @@
+<html> 
+   
+  
+   <body> 
+
+      <table border="5" cellpadding="3" > 
+         <tr> 
+            <td colspan="3"><input type="text" id="outcome"/></td> 
+            
+            <td><input type="button" value="c" onclick="clearNum()"/> </td> 
+         </tr> 
+         <tr> 
+            
+            <td><input type="button" value="1" onclick="addNum('1')"/> </td> 
+            <td><input type="button" value="2" onclick="addNum('2')"/> </td> 
+            <td><input type="button" value="3" onclick="addNum('3')"/> </td> 
+            <td><input type="button" value="/" onclick="addNum('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="addNum('4')"/> </td> 
+            <td><input type="button" value="5" onclick="addNum('5')"/> </td> 
+            <td><input type="button" value="6" onclick="addNum('6')"/> </td> 
+            <td><input type="button" value="-" onclick="addNum('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="addNum('7')"/> </td> 
+            <td><input type="button" value="8" onclick="addNum('8')"/> </td> 
+            <td><input type="button" value="9" onclick="addNum('9')"/> </td> 
+            <td><input type="button" value="+" onclick="addNum('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="addNum('.')"/> </td> 
+            <td><input type="button" value="0" onclick="addNum('0')"/> </td> 
+            <td><input type="button" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" value="*" onclick="addNum('*')"/> </td> 
+         </tr> 
+      </table> 
+	  <script> 
+        
+         function addNum(val) 
+         { 
+             document.getElementById("outcome").value+=val 
+         } 
+           
+       
+         function solve() 
+         { 
+             var x = document.getElementById("outcome").value 
+             var y = eval(x) 
+             document.getElementById("outcome").value = y 
+         } 
+           
+         
+         function clearNum() 
+         { 
+             document.getElementById("outcome").value = "" 
+         } 
+      </script>
+	 
+   </body> 
+</html>  
